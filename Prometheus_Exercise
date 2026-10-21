@@ -67,3 +67,31 @@ kubectl describe apiservice v1beta1.metrics.k8s.io
 
 
 
+$ kubectl top nodes
+NAME                       CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+devops-lab-control-plane   169m         8%       830Mi           21%         
+endu@endu-VMware-Virtual-Platform:~$ kubectl top pods -A
+NAMESPACE            NAME                                               CPU(cores)   MEMORY(bytes)   
+default              crash-lab-845f874ff9-tc67b                         0m           0Mi             
+default              web-lab-8587c47b5f-qhddw                           0m           3Mi             
+imagepull-lab        broken-image                                       0m           3Mi             
+kube-system          coredns-559f6c778d-bqpqc                           2m           15Mi            
+kube-system          coredns-559f6c778d-xd2zf                           2m           23Mi            
+kube-system          etcd-devops-lab-control-plane                      23m          40Mi            
+kube-system          kindnet-zdbcj                                      1m           21Mi            
+kube-system          kube-apiserver-devops-lab-control-plane            42m          281Mi           
+kube-system          kube-controller-manager-devops-lab-control-plane   17m          55Mi            
+kube-system          kube-proxy-fvz2p                                   1m           35Mi            
+kube-system          kube-scheduler-devops-lab-control-plane            9m           25Mi            
+kube-system          metrics-server-84c99cb944-77dkv                    4m           43Mi            
+local-path-storage   local-path-provisioner-75f7fc7dc5-b5p6x            1m           17Mi 
+
+
+
+
+
+
+
+
+
+
