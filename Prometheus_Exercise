@@ -2,27 +2,22 @@ Results:
 up
 up{instance="prometheus:9090", job="prometheus"}
 
-{instance="prometheus:9090", job="prometheus"} 1
-Error executing query
-invalid parameter "query": 1:48: parse error: unexpected number "1"
-
-up{job="prometheus"}
-up{instance="prometheus:9090", job="prometheus"}
-
-curl -sG 'http://localhost:9090/api/v1/query' \
-  --data-urlencode 'query=vector(1)'
-
-{"status":"success","data":{"resultType":"vector","result":[{"metric":{},"value":[1792612652.462,"1"]}]}}
-
-
-curl -sG 'http://localhost:9090/api/v1/query' \
-  --data-urlencode 'query=up'
-
-{"status":"success","data":{"resultType":"vector","result":[{"metric":{"__name__":"up","instance":"prometheus:9090","job":"prometheus"},"value":[1792612852.167,"1"]}]}}
-
-
-Successfully queried the Prometheus API.
-Next, you can start to visualize data by building a dashboard from scratch or by querying data in the Explore view.
-Open in Metrics Drilldown
+{code="200", handler="/", instance="prometheus:9090", job="prometheus"}	0
+{code="200", handler="/-/healthy", instance="prometheus:9090", job="prometheus"}	0
+{code="200", handler="/-/quit", instance="prometheus:9090", job="prometheus"}	0
+{code="200", handler="/-/ready", instance="prometheus:9090", job="prometheus"}	0
+{code="200", handler="/-/reload", instance="prometheus:9090", job="prometheus"}	0
+{code="200", handler="/alertmanager-discovery", instance="prometheus:9090", job="prometheus"}	0
+{code="200", handler="/alerts", instance="prometheus:9090", job="prometheus"}	0
+{code="200", handler="/api/v1/*path", instance="prometheus:9090", job="prometheus"}	0
+{code="200", handler="/api/v1/admin/tsdb/clean_tombstones", instance="prometheus:9090", job="prometheus"}	0
+{code="200", handler="/api/v1/admin/tsdb/delete_series", instance="prometheus:9090", job="prometheus"}	0
+{code="200", handler="/api/v1/admin/tsdb/snapshot", instance="prometheus:9090", job="prometheus"}	0
+{code="200", handler="/api/v1/alertmanagers", instance="prometheus:9090", job="prometheus"}	0
+{code="200", handler="/api/v1/alerts", instance="prometheus:9090", job="prometheus"}	0
+{code="200", handler="/api/v1/features", instance="prometheus:9090", job="prometheus"}	0
+{code="200", handler="/api/v1/format_query", instance="prometheus:9090", job="prometheus"}	0
+{code="200", handler="/api/v1/label/:name/values", instance="prometheus:9090", job="prometheus"}	0.003508771929824561
+{code="200", handler="/api/v1/labels", instance="prometheus:9090", job="prometheus"}	0
 
 
