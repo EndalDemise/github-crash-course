@@ -2,7 +2,8 @@ Results:
 up
 up{instance="prometheus:9090", job="prometheus"}
 
-process_resident_memory_bytes
-process_resident_memory_bytes{instance="prometheus:9090", job="prometheus"}	37584896
+for i in {1..50}; do
+  curl -s http://localhost:9090/-/healthy > /dev/null
+done
 
 
