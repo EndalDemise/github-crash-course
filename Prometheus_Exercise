@@ -25,3 +25,10 @@ prometheus_http_requests_total{code="200", handler="/-/healthy", instance="prome
 rate(prometheus_http_requests_total{handler="/-/healthy"}[1m])
 
 {code="200", handler="/-/healthy", instance="prometheus:9090", job="prometheus"}	0
+
+
+
+for i in {1..30}; do
+  curl -s http://localhost:9090/-/healthy > /dev/null
+  sleep 1
+done
