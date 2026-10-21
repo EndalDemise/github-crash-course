@@ -2,22 +2,7 @@ Results:
 up
 up{instance="prometheus:9090", job="prometheus"}
 
-{code="200", handler="/", instance="prometheus:9090", job="prometheus"}	0
-{code="200", handler="/-/healthy", instance="prometheus:9090", job="prometheus"}	0
-{code="200", handler="/-/quit", instance="prometheus:9090", job="prometheus"}	0
-{code="200", handler="/-/ready", instance="prometheus:9090", job="prometheus"}	0
-{code="200", handler="/-/reload", instance="prometheus:9090", job="prometheus"}	0
-{code="200", handler="/alertmanager-discovery", instance="prometheus:9090", job="prometheus"}	0
-{code="200", handler="/alerts", instance="prometheus:9090", job="prometheus"}	0
-{code="200", handler="/api/v1/*path", instance="prometheus:9090", job="prometheus"}	0
-{code="200", handler="/api/v1/admin/tsdb/clean_tombstones", instance="prometheus:9090", job="prometheus"}	0
-{code="200", handler="/api/v1/admin/tsdb/delete_series", instance="prometheus:9090", job="prometheus"}	0
-{code="200", handler="/api/v1/admin/tsdb/snapshot", instance="prometheus:9090", job="prometheus"}	0
-{code="200", handler="/api/v1/alertmanagers", instance="prometheus:9090", job="prometheus"}	0
-{code="200", handler="/api/v1/alerts", instance="prometheus:9090", job="prometheus"}	0
-{code="200", handler="/api/v1/features", instance="prometheus:9090", job="prometheus"}	0
-{code="200", handler="/api/v1/format_query", instance="prometheus:9090", job="prometheus"}	0
-{code="200", handler="/api/v1/label/:name/values", instance="prometheus:9090", job="prometheus"}	0.003508771929824561
-{code="200", handler="/api/v1/labels", instance="prometheus:9090", job="prometheus"}	0
+process_resident_memory_bytes
+process_resident_memory_bytes{instance="prometheus:9090", job="prometheus"}	37584896
 
 
