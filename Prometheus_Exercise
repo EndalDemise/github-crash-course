@@ -6,6 +6,5 @@ up{instance="prometheus:9090", job="prometheus"}
 Error executing query
 invalid parameter "query": 1:48: parse error: unexpected number "1"
 
-up(job="prometheus")
-Error executing query
-invalid parameter "query": 1:7: parse error: unexpected "="
+up{job="prometheus"}
+up{instance="prometheus:9090", job="prometheus"}
