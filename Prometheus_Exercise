@@ -46,10 +46,14 @@ rate(prometheus_http_requests_total{handler="/-/healthy"}[5m])
 memory usage
 process_resident_memory_bytes
 
+$ kubectl get deployment metrics-server -n kube-system
+Error from server (NotFound): deployments.apps "metrics-server" not found
+endu@endu-VMware-Virtual-Platform:~$ kuebctl get apiserver v1beta1.metrics.k8s.io
+Command 'kuebctl' not found, did you mean:
+  command 'kubectl' from snap kubectl (1.35.9)
+See 'snap info <snapname>' for additional versions.
+endu@endu-VMware-Virtual-Platform:~$ kubectl get apiserver v1beta1.metrics.k8s.io
+error: the server doesn't have a resource type "apiserver"
 
 
-$ kubectl top nodes
-error: Metrics API not available
-endu@endu-VMware-Virtual-Platform:~$ kubectl top pods -A
-error: Metrics API not available
 
