@@ -88,9 +88,18 @@ local-path-storage   local-path-provisioner-75f7fc7dc5-b5p6x            1m      
 
 
 
-$ kubectl get pods -A | grep -i prometheus
-endu@endu-VMware-Virtual-Platform:~$ kubectl get svc -A | grep - prometheus
-grep: prometheus: No such file or directory
+$ docker ps
+CONTAINER ID   IMAGE                  COMMAND                  CREATED       STATUS       PORTS                                         NAMES
+5b8d2f2bfa6b   prom/prometheus        "/bin/prometheus --c…"   2 hours ago   Up 2 hours   0.0.0.0:9090->9090/tcp, [::]:9090->9090/tcp   lab-prometheus
+7885505bf213   grafana/grafana        "/run.sh"                2 hours ago   Up 2 hours   0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp   lab-grafana
+83123ca726ea   kindest/node:v1.37.0   "/usr/local/bin/entr…"   7 days ago    Up 3 hours   127.0.0.1:33421->6443/tcp                     devops-lab-control-plane
+endu@endu-VMware-Virtual-Platform:~$ docker ps -a
+CONTAINER ID   IMAGE                  COMMAND                  CREATED       STATUS                  PORTS                                         NAMES
+5b8d2f2bfa6b   prom/prometheus        "/bin/prometheus --c…"   2 hours ago   Up 2 hours              0.0.0.0:9090->9090/tcp, [::]:9090->9090/tcp   lab-prometheus
+7885505bf213   grafana/grafana        "/run.sh"                2 hours ago   Up 2 hours              0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp   lab-grafana
+83123ca726ea   kindest/node:v1.37.0   "/usr/local/bin/entr…"   7 days ago    Up 3 hours              127.0.0.1:33421->6443/tcp                     devops-lab-control-plane
+1458f3742c1c   nginx:alpine           "/docker-entrypoint.…"   7 days ago    Exited (0) 7 days ago                                                 web-lab
+
 
 
 
