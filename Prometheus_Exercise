@@ -8,3 +8,6 @@ invalid parameter "query": 1:48: parse error: unexpected number "1"
 
 up{job="prometheus"}
 up{instance="prometheus:9090", job="prometheus"}
+
+curl -sG 'http://localhost:9090/api/v1/query' \
+  --data-urlencode 'query=vector(1)'
