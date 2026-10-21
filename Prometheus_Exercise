@@ -20,3 +20,4 @@ prometheus_http_requests_total{handler="/-/healthy"}
 sum(rate(prometheus_http_requests_total{handler="/-/healthy"}[1m]))
 
 
+prometheus_http_requests_total{code="200", handler="/-/healthy", instance="prometheus:9090", job="prometheus"}	100
