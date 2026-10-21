@@ -21,5 +21,25 @@ curl -sG 'http://localhost:9090/api/v1/query' \
 {"status":"success","data":{"resultType":"vector","result":[{"metric":{"__name__":"up","instance":"prometheus:9090","job":"prometheus"},"value":[1792612852.167,"1"]}]}}
 
 
-curl -sG 'http://localhost:9090/api/v1/query' \
+$ curl -sG 'http://localhost:9090/api/v1/query' \
   --data-urlencode 'query=up' | python3 -m json.tool
+{
+    "status": "success",
+    "data": {
+        "resultType": "vector",
+        "result": [
+            {
+                "metric": {
+                    "__name__": "up",
+                    "instance": "prometheus:9090",
+                    "job": "prometheus"
+                },
+                "value": [
+                    1792613284.428,
+                    "1"
+                ]
+            }
+        ]
+    }
+}
+
