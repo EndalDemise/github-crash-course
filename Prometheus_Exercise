@@ -6,7 +6,17 @@ for i in {1..50}; do
   curl -s http://localhost:9090/-/healthy > /dev/null
 done
 
+
+
+for i in {1..50}; do
+  curl -s http://localhost:9090/-/healthy > /dev/null
+done
+
+
+
+prometheus_http_requests_total{handler="/-/healthy"}
+
+
 sum(rate(prometheus_http_requests_total{handler="/-/healthy"}[1m]))
 
-$ sum(rate(prometheus_http_requests_total{handler="/-/healthy"}[1m]))
-bash: syntax error near unexpected token `rate'
+
