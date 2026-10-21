@@ -48,24 +48,8 @@ process_resident_memory_bytes
 
 
 
-$ kubectl get nodes
-NAME                       STATUS   ROLES           AGE     VERSION
-devops-lab-control-plane   Ready    control-plane   7d15h   v1.37.0
-endu@endu-VMware-Virtual-Platform:~$ kubectl get pods -A
-NAMESPACE            NAME                                               READY   STATUS      RESTARTS       AGE
-default              crash-lab-845f874ff9-tc67b                         1/1     Running     12 (14m ago)   7d14h
-default              oom-lab                                            0/1     Completed   0              7d1h
-default              oom-test                                           0/1     OOMKilled   0              24h
-default              web-lab-8587c47b5f-qhddw                           1/1     Running     4 (134m ago)   7d14h
-imagepull-lab        broken-image                                       1/1     Running     3 (134m ago)   7d1h
-kube-system          coredns-559f6c778d-bqpqc                           1/1     Running     4 (134m ago)   7d15h
-kube-system          coredns-559f6c778d-xd2zf                           1/1     Running     4 (134m ago)   7d15h
-kube-system          etcd-devops-lab-control-plane                      1/1     Running     4 (134m ago)   7d15h
-kube-system          kindnet-zdbcj                                      1/1     Running     4 (134m ago)   7d15h
-kube-system          kube-apiserver-devops-lab-control-plane            1/1     Running     4 (134m ago)   7d15h
-kube-system          kube-controller-manager-devops-lab-control-plane   1/1     Running     4 (134m ago)   7d15h
-kube-system          kube-proxy-fvz2p                                   1/1     Running     4 (134m ago)   7d15h
-kube-system          kube-scheduler-devops-lab-control-plane            1/1     Running     4 (134m ago)   7d15h
-local-path-storage   local-path-provisioner-75f7fc7dc5-b5p6x            1/1     Running     8 (133m ago)   7d15h
-
+$ kubectl top nodes
+error: Metrics API not available
+endu@endu-VMware-Virtual-Platform:~$ kubectl top pods -A
+error: Metrics API not available
 
