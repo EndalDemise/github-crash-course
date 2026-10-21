@@ -11,3 +11,5 @@ up{instance="prometheus:9090", job="prometheus"}
 
 curl -sG 'http://localhost:9090/api/v1/query' \
   --data-urlencode 'query=vector(1)'
+
+{"status":"success","data":{"resultType":"vector","result":[{"metric":{},"value":[1792612652.462,"1"]}]}}
