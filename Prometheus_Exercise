@@ -6,4 +6,4 @@ for i in {1..50}; do
   curl -s http://localhost:9090/-/healthy > /dev/null
 done
 
-
+sum(rate(prometheus_http_requests_total{handler="/-/healthy"}[1m]))
