@@ -35,3 +35,18 @@ done
 
 
 {code="200", handler="/-/healthy", instance="prometheus:9090", job="prometheus"}	0.10526315789473684
+
+
+
+
+
+Request Rate
+rate(prometheus_http_requests_total{handler="/-/healthy"}[5m])
+
+memory usage
+process_resident_memory_bytes
+
+
+
+
+
